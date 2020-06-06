@@ -9,7 +9,7 @@ class SortingMenu extends Component {
                     <li><button className="sortButton" 
                         onClick={() =>{
                             this.props.get_array();
-                        }}>Get Array
+                        }}>Change Array
                         </button>
                     </li>
                     

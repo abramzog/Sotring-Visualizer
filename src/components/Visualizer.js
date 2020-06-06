@@ -51,7 +51,6 @@ class Visualizer extends Component {
         })
     }
 
-
     async bubble_sort_visualize(text){
         if(this.state.status === false){
             this.change_style(text);
@@ -82,7 +81,6 @@ class Visualizer extends Component {
         animations.push([0,0,3]);
         return animations;
     }
-
 
     async insertion_sort_visualize(text){
         if(this.state.status === false){
@@ -232,7 +230,6 @@ class Visualizer extends Component {
             this.merge_sort_helper(animations, arr, mid+1, high);
             this.merge_helper(animations, arr, low, mid, high);
         }
-        //this.setState({array: arr});
     }
 
     merge_helper(animations, arr, low, mid, high){
@@ -247,8 +244,7 @@ class Visualizer extends Component {
                 new_array.push(arr[i]);
                 i++;
                 k++;
-                
-            } else{
+            } else {
                 const diff = j - k;
                 animations.push([j, j - diff, 1]);
                 animations.push([j, j - diff, -1]);
