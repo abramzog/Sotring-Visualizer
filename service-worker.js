@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Sotring-Visualizer/precache-manifest.41942a6421d208411573f67a6460c975.js"
+  "/Sotring-Visualizer/precache-manifest.822d68d61a681bec38701d76258a85b6.js"
 );
 
 self.addEventListener('message', (event) => {
