@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Sotring-Visualizer/static/css/main.006436bb.chunk.css",
+    "main.js": "/Sotring-Visualizer/static/js/main.802a72e8.chunk.js",
+    "main.js.map": "/Sotring-Visualizer/static/js/main.802a72e8.chunk.js.map",
+    "runtime-main.js": "/Sotring-Visualizer/static/js/runtime-main.0131f389.js",
+    "runtime-main.js.map": "/Sotring-Visualizer/static/js/runtime-main.0131f389.js.map",
+    "static/js/2.dee44989.chunk.js": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js",
+    "static/js/2.dee44989.chunk.js.map": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js.map",
+    "index.html": "/Sotring-Visualizer/index.html",
+    "precache-manifest.41942a6421d208411573f67a6460c975.js": "/Sotring-Visualizer/precache-manifest.41942a6421d208411573f67a6460c975.js",
+    "service-worker.js": "/Sotring-Visualizer/service-worker.js",
+    "static/css/main.006436bb.chunk.css.map": "/Sotring-Visualizer/static/css/main.006436bb.chunk.css.map",
+    "static/js/2.dee44989.chunk.js.LICENSE.txt": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0131f389.js",
+    "static/js/2.dee44989.chunk.js",
+    "static/css/main.006436bb.chunk.css",
+    "static/js/main.802a72e8.chunk.js"
+  ]
+}
