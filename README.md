@@ -1,4 +1,4 @@
-https://abramzog.github.io/Sotring-Visualizer/
+You can access it here : https://abramzog.github.io/Sotring-Visualizer/
 
 ##
 
