@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Sotring-Visualizer/static/css/main.006436bb.chunk.css",
-    "main.js": "/Sotring-Visualizer/static/js/main.05992c54.chunk.js",
-    "main.js.map": "/Sotring-Visualizer/static/js/main.05992c54.chunk.js.map",
+    "main.css": "/Sotring-Visualizer/static/css/main.979e94d5.chunk.css",
+    "main.js": "/Sotring-Visualizer/static/js/main.882eeeea.chunk.js",
+    "main.js.map": "/Sotring-Visualizer/static/js/main.882eeeea.chunk.js.map",
     "runtime-main.js": "/Sotring-Visualizer/static/js/runtime-main.0131f389.js",
     "runtime-main.js.map": "/Sotring-Visualizer/static/js/runtime-main.0131f389.js.map",
     "static/js/2.dee44989.chunk.js": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js",
     "static/js/2.dee44989.chunk.js.map": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js.map",
     "index.html": "/Sotring-Visualizer/index.html",
-    "precache-manifest.822d68d61a681bec38701d76258a85b6.js": "/Sotring-Visualizer/precache-manifest.822d68d61a681bec38701d76258a85b6.js",
+    "precache-manifest.4e96b5794edbab2622e3418e6d708620.js": "/Sotring-Visualizer/precache-manifest.4e96b5794edbab2622e3418e6d708620.js",
     "service-worker.js": "/Sotring-Visualizer/service-worker.js",
-    "static/css/main.006436bb.chunk.css.map": "/Sotring-Visualizer/static/css/main.006436bb.chunk.css.map",
+    "static/css/main.979e94d5.chunk.css.map": "/Sotring-Visualizer/static/css/main.979e94d5.chunk.css.map",
     "static/js/2.dee44989.chunk.js.LICENSE.txt": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0131f389.js",
     "static/js/2.dee44989.chunk.js",
-    "static/css/main.006436bb.chunk.css",
-    "static/js/main.05992c54.chunk.js"
+    "static/css/main.979e94d5.chunk.css",
+    "static/js/main.882eeeea.chunk.js"
   ]
 }

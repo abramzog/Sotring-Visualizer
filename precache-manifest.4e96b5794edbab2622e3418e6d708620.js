@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a49d770cb03ae6bf8f6cd1b8a95951f0",
+    "revision": "ffe0fc61175fdc57cab87360734ccc6b",
     "url": "/Sotring-Visualizer/index.html"
   },
   {
-    "revision": "7ba79d875a96d7b95b26",
-    "url": "/Sotring-Visualizer/static/css/main.006436bb.chunk.css"
+    "revision": "b55c792ed32ec5e3658a",
+    "url": "/Sotring-Visualizer/static/css/main.979e94d5.chunk.css"
   },
   {
     "revision": "a413d96b19ee2c81b4ec",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Sotring-Visualizer/static/js/2.dee44989.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7ba79d875a96d7b95b26",
-    "url": "/Sotring-Visualizer/static/js/main.05992c54.chunk.js"
+    "revision": "b55c792ed32ec5e3658a",
+    "url": "/Sotring-Visualizer/static/js/main.882eeeea.chunk.js"
   },
   {
     "revision": "b83936bcbbdcfac23843",
