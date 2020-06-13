@@ -3,7 +3,7 @@ import './Visualizer.css';
 import SortingMenu from './SortingMenu';
 
 class Visualizer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             array: [],
@@ -15,17 +15,17 @@ class Visualizer extends Component {
         this.get_array();
     }
 
-    get_array(){
+    get_array() {
         const numbOfBars = window.screen.width*0.8/10;
         const array = [];
-        for(let i = 0; i < numbOfBars; i++){
+        for(let i = 0; i < numbOfBars; i++) {
             array.push(Math.floor(Math.random() * 450) + 10);
         }
         this.setState({array: array});
     }
 
-    new_array(){
-        if(this.state.status === false){
+    new_array() {
+        if(this.state.status === false) {
             const bars = Array.from(document.getElementsByClassName("bar"));
             bars.forEach(element => {
                 element.style.backgroundColor = 'bisque';
@@ -34,25 +34,24 @@ class Visualizer extends Component {
         }
     }
 
-    change_style(text){
-        const buttons = Array.from(document.getElementsByClassName("sortButton"));
+    change_style(text) {
+        const buttons = Array.from(document.getElementsByClassName("sort_button"));
         buttons.forEach(button => {
-            if(button.innerText !== text){
-                button.style.backgroundColor = 'grey'; 
-                button.style.opacity= 0.2;
+            if(button.innerText !== text) {
+                button.className = "grey_button";
             }
         })
     }
 
-    revert_style(){
-        const buttons = Array.from(document.getElementsByClassName("sortButton"));
+    revert_style() {
+        const buttons = Array.from(document.getElementsByClassName("grey_button"));
         buttons.forEach(button => {
-            button.style = "sortButton";
+            button.className = "sort_button";
         })
     }
 
-    async bubble_sort_visualize(text){
-        if(this.state.status === false){
+    async bubble_sort_visualize(text) {
+        if(this.state.status === false) {
             this.change_style(text);
             this.setState({status: true});
             const arr = this.state.array.slice();
@@ -64,11 +63,11 @@ class Visualizer extends Component {
         }
     }
 
-    bubble_sort_and_push(animations, arr){
-        for(let i=0; i < arr.length - 1; i++){
-            for(let j=0; j < arr.length - i - 1; j++){
+    bubble_sort_and_push(animations, arr) {
+        for(let i=0; i < arr.length - 1; i++) {
+            for(let j=0; j < arr.length - i - 1; j++) {
                 animations.push([j, j+1, 0]);
-                if(arr[j] > arr[j+1]){
+                if(arr[j] > arr[j+1]) {
                     animations.push([j, j+1, 1]);
                     const tmp = arr[j+1];
                     arr[j+1] = arr[j];
@@ -82,8 +81,8 @@ class Visualizer extends Component {
         return animations;
     }
 
-    async insertion_sort_visualize(text){
-        if(this.state.status === false){
+    async insertion_sort_visualize(text) {
+        if(this.state.status === false) {
             this.change_style(text);
             this.setState({status: true});
             const arr = this.state.array.slice();
@@ -94,12 +93,12 @@ class Visualizer extends Component {
         }
     }
 
-    insertion_sort_and_push(animations, arr){
-        for(let i=1; i < arr.length; i++){
+    insertion_sort_and_push(animations, arr) {
+        for(let i=1; i < arr.length; i++) {
             let curr = arr[i];
             let change = false;
             let j = i -1;
-            while(j >= 0 && curr < arr[j]){
+            while(j >= 0 && curr < arr[j]) {
                 animations.push([j, j+1, 0]);
                 animations.push([j, j+1, 1]);
                 animations.push([j, j+1, 2]);
@@ -107,7 +106,7 @@ class Visualizer extends Component {
                 arr[j+1] = arr[j];
                 j--;
             }
-            if(change === false){
+            if(change === false) {
                 animations.push([j, j+1, 0]);
                 animations.push([j, j+1, 2]);
             }
@@ -119,14 +118,14 @@ class Visualizer extends Component {
         return animations;
     }
 
-    pushGreen(arr, animations){
-        for(let i=0; i < arr.length; i++){
+    pushGreen(arr, animations) {
+        for(let i=0; i < arr.length; i++) {
             animations.push([i,i,3]);
         }
     }
 
-    async selection_sort_visualize(text){
-        if(this.state.status === false){
+    async selection_sort_visualize(text) {
+        if(this.state.status === false) {
             this.change_style(text);
             this.setState({status: true});
             const arr = this.state.array.slice();
@@ -137,13 +136,13 @@ class Visualizer extends Component {
         }
     }
 
-    selection_sort_and_push(animations, arr){
-        for(let i=0; i < arr.length; i++){
+    selection_sort_and_push(animations, arr) {
+        for(let i=0; i < arr.length; i++) {
             let minIndex = i;
-            for(let j = i+1; j < arr.length; j++){
+            for(let j = i+1; j < arr.length; j++) {
                 animations.push([minIndex, j, 0]);
                 animations.push([minIndex, j, 2]);
-                if(arr[minIndex] > arr[j]){
+                if(arr[minIndex] > arr[j]) {
                     minIndex = j;
                 }
             }
@@ -157,8 +156,8 @@ class Visualizer extends Component {
         return animations;
     }
 
-    async quick_sort_visulaize(text){
-        if(this.state.status === false){
+    async quick_sort_visulaize(text) {
+        if(this.state.status === false) {
             this.change_style(text);
             this.setState({status: true});
             const arr = this.state.array.slice();
@@ -171,8 +170,8 @@ class Visualizer extends Component {
         
     }
 
-    quick_sort_helper(animations, arr, low, high){
-        if(low < high){
+    quick_sort_helper(animations, arr, low, high) {
+        if(low < high) {
             const mid = this.partition(animations, arr, low, high);
             this.quick_sort_helper(animations, arr, low, mid - 1);
             this.quick_sort_helper(animations, arr, mid + 1, high);
@@ -180,15 +179,15 @@ class Visualizer extends Component {
         return animations;
     }
 
-    partition(animations, arr, low, high){
+    partition(animations, arr, low, high) {
         const pivot = high;
         const tmp_pivot = arr[pivot];
         low--;        
-        for(let i = low+1; i < high; i++){
+        for(let i = low+1; i < high; i++) {
             animations.push([i,high,0]);
-            if(arr[i] < arr[high]){
+            if(arr[i] < arr[high]) {
                 low++;
-                if(low !== i){
+                if(low !== i) {
                     animations.push([low, i, 1]);
                     animations.push([low, i, 2]);
                     const tmp = arr[low];
@@ -199,7 +198,7 @@ class Visualizer extends Component {
             animations.push([i,high,2]);
         }
         low++;
-        if(low !== high){
+        if(low !== high) {
             animations.push([low, high, 1]);
             animations.push([low, high, 2]);
             arr[high] = arr[low];
@@ -209,8 +208,8 @@ class Visualizer extends Component {
         return low;
     }
 
-    async merge_sort_visualize(text){
-        if(this.state.status === false){
+    async merge_sort_visualize(text) {
+        if(this.state.status === false) {
             this.change_style(text);
             this.setState({status: true});
             const arr = this.state.array.slice();
@@ -223,8 +222,8 @@ class Visualizer extends Component {
         }
     }
 
-    merge_sort_helper(animations, arr, low, high){
-        if(low < high){
+    merge_sort_helper(animations, arr, low, high) {
+        if(low < high) {
             const mid = Math.floor(low + (high-low)/2);
             this.merge_sort_helper(animations, arr, low, mid);
             this.merge_sort_helper(animations, arr, mid+1, high);
@@ -232,14 +231,14 @@ class Visualizer extends Component {
         }
     }
 
-    merge_helper(animations, arr, low, mid, high){
+    merge_helper(animations, arr, low, mid, high) {
         const new_array= [];
         let i = low;
         let k = low;
         let j = mid+1;
-        while(i <= mid && j <= high){
+        while(i <= mid && j <= high) {
             animations.push([k,j,0]);
-            if(arr[i] <= arr[j]){
+            if(arr[i] <= arr[j]) {
                 animations.push([k,j,2]);
                 new_array.push(arr[i]);
                 i++;
@@ -253,70 +252,70 @@ class Visualizer extends Component {
                 k++;
             }
         }
-        while(i <= mid){
+        while(i <= mid) {
             new_array.push(arr[i]);
             i++;
         }
-        while(j <= high){
+        while(j <= high) {
             new_array.push(arr[j]);
             j++;
         }
-        while(high >= low){
+        while(high >= low) {
             arr[high] = new_array.pop();
             high--;
         }
     }
 
-    merge_sort_animate(animations){
+    merge_sort_animate(animations) {
         return new Promise(resolve => {  
             const colors = ['blue', 'red', 'bisque', '#80ff80'];
             const bars = document.getElementsByClassName("bar");
             let i = 0;
-            const intervalHandler = function(){
+            const intervalHandler = function() {
                 const animation = animations[i];
                 let j = animation[0];
                 let k = animation[1];
                 let color = animation[2];
-                if(color === 0 || color === 2 || color === 3){
+                if(color === 0 || color === 2 || color === 3) {
                     changeColor(bars[k], bars[j], colors[color]);
                 }
                 else{
-                    if(color === -1){
+                    if(color === -1) {
                         color = 2;
                     }
-                    while(k < j){
+                    while(k < j) {
                         changeColor(bars[j], bars[j-1], colors[color]);
                         j--;
                     }
                 }
                 i++;
-                if(i === animations.length){
+                if(i === animations.length) {
                     window.clearInterval(interval);
                     resolve();
                 }
             }
-            const interval = window.setInterval(intervalHandler,3);
+            const interval = window.setInterval(intervalHandler,1);
         })
     }
 
-    animate(animations){  
+    animate(animations) {  
         return new Promise(resolve => {  
             const colors = ['blue', 'red', 'bisque', '#80ff80'];
             const bars = document.getElementsByClassName("bar");
             let i = 0;
-            const intervalHandler = function(){
+            const intervalHandler = function() {
                 const animation = animations[i];
                 const bar1 = bars[animation[0]];
                 const bar2 = bars[animation[1]];
                 const color = colors[animation[2]];
                 changeColor(bar1, bar2, color);
                 i++;
-                if(i === animations.length){
+                if(i === animations.length) {
                     window.clearInterval(interval);
                     resolve();
                 }
             }
-            const interval = window.setInterval(intervalHandler,3);
+            const interval = window.setInterval(intervalHandler,1);
         })
     }
 
@@ -347,10 +346,10 @@ class Visualizer extends Component {
 
 }
 
-function changeColor(bar1, bar2, color){
+function changeColor(bar1, bar2, color) {
     bar1.style.backgroundColor = color;
     bar2.style.backgroundColor = color;
-    if(color === 'red'){
+    if(color === 'red') {
         const tmp = bar1.style.height;
         bar1.style.height = bar2.style.height;
         bar2.style.height = tmp; 

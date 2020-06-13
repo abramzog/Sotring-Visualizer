@@ -1,6 +1,7 @@
 .array{
     margin-top: 50px;
 }
+
 .bar {
     display: inline-block;
     width: 2px;
@@ -9,7 +10,6 @@
     background-color: bisque;   
 }
 
-
 nav {
     padding: 0;
     margin: 0;
@@ -17,7 +17,7 @@ nav {
     display: block;
 }
 
-nav ul{
+nav ul {
     list-style: none;
 }
 
@@ -26,16 +26,29 @@ nav ul li {
     margin: 0;
 }
 
-.sortButton {
+.sort_button {
     background-color: ivory;
     color: black;
     padding: 10px 25px;
     border-radius: 3px;
     margin: 5px;
     font-size: 16px;
+    opacity: 1;
 }
 
-.sortButton:hover {
+.sort_button:hover {
     background-color: dodgerblue;
     color: white;
+    opacity: 1;
+
+}
+
+.grey_button {
+    background-color: grey;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 3px;
+    margin: 5px;
+    font-size: 16px;
+    opacity: 0.2;
 }
